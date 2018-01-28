@@ -87,10 +87,11 @@ $toolbar-md-background: color($colors,secondary);
 //Botton Tabs
 $tabs-md-background: color($colors , secondary);
 $tabs-md-tab-color-active: color($colors  , light);
+// $tabs-md-tab-color-inactive: color($colors, dark);
 
 //Lists
-//$lists-md-background-color: color($colors , secondary);
-$lists-md-text-color: color($colors , light);
+$list-md-background-color: color($colors , secondary);
+$list-md-text-color: color($colors , light);
 
 // Fonts
 // --------------------------------------------------
