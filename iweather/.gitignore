@@ -12,7 +12,7 @@ log.txt
 .vscode/
 npm-debug.log*
 
-./src/providers/apiKeys.js
+src/providers/apiKeys.js
 
 .idea/
 .sourcemaps/
