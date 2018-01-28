@@ -12,7 +12,9 @@ import { SettingsPage } from '../pages/settings/settings';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { WeatherProvider } from '../providers/weather/weather';
-import { HttpModule } from  '@angular/http';
+// import { HttpModule } from  '@angular/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { HttpModule } from  '@angular/http';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    // HttpModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -41,6 +44,7 @@ import { HttpModule } from  '@angular/http';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    HttpClientModule,
     WeatherProvider
   ]
 })
