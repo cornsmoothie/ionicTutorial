@@ -20,13 +20,48 @@ export class HomePage {
 
   }
 
+  // willEnter() {
   ionViewWillEnter() {
     this.location = {
       city: "Philadelphia",
       state: "PA"
     }
+    const testing = this;
+    // this.weatherProvider.getWeather(this.location.city , this.location.state).subscribe(retrievedWeather => {console.log(retrievedWeather.current_observation);});
+    // this.weatherProvider.getWeather(this.location.city , this.location.state).subscribe(retrievedWeather => {console.log(retrievedWeather);});
 
-    this.weatherProvider.getWeather(this.location.city , this.location.state).subscribe(weather => {console.log(weather)});
+    // this.weather = this.weatherProvider.getWeather(this.location.city , this.location.state).subscribe(retrievedWeather => {
+    //   this.weather = retrievedWeather;
+    //   console.log(this.location);
+    //   console.log(this.weather);
+    //   return this.weather;
+    // });
+
+    // this.weatherProvider.getWeather(this.location.city , this.location.state).subscribe(retrievedWeather => {
+    //   console.log(this);
+    //   this.weather = retrievedWeather;
+    //   console.log(this.weather);
+    // });
+
+    this.weatherProvider.getWeather(this.location.city , this.location.state).subscribe(retrievedWeather => {
+      console.log(this);
+      this.weather = retrievedWeather.current_observation;
+      console.log(this.weather);
+    });
+
+    // this.weatherProvider.getWeather(this.location.city , this.location.state).subscribe(this.weatherHandler(retrievedWeather));
+
+    // this.weatherProvider.getWeather(this.location.city , this.location.state).subscribe(retrievedWeather => {
+    //   testing = retrievedWeather;
+    //   console.log(testing);
+    // });
+    var storedThis = this;
+    console.log(this);
+    console.log(this.location);
+    console.log(this.weather);
+    console.log(storedThis.weather);
+    console.log(storedThis);
+    console.log(testing.weather);
+    // console.log(testing);
   }
-
 }

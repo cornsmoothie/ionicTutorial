@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import * as keys from '../apiKeys';
+// import * as keys from '../apiKeys'; //sometimes you have to use this one(i had to on linux) vs. the line below idk why
+import * as keys from '../apiKeys.js';
 import 'rxjs/add/operator/map';
 
 /*
@@ -21,7 +22,8 @@ export class WeatherProvider {
 
   getWeather(city , state) {
     return this.http.get(this.url + '/' + state + '/' + city + '.json')
-    .map(res => res);
+    .map(result => result);
+    // return this.http.get(this.url + '/' + state + '/' + city + '.json');
   }
 
 }
